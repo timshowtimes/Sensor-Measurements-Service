@@ -26,6 +26,7 @@ public class MeasurementController {
     private final SensorService sensorService;
     private final MeasurementService measurementService;
     private final ErrorMessageBuilder errorMessageBuilder;
+    private List<Measurement> measurementsList;
 
     @Autowired
     public MeasurementController(SensorService sensorService, MeasurementService measurementService,
@@ -42,17 +43,14 @@ public class MeasurementController {
 
     @GetMapping()
     public List<MeasurementDTO> index() {
-        return measurementService.findAll()
-                .stream().map(measurementService::converToMeasurementDTO)
+        measurementsList = measurementService.findAll();
+        return measurementsList.stream().map(measurementService::converToMeasurementDTO)
                 .toList();
     }
 
     @GetMapping("/rainyDaysCount")
     public long rainyDaysCount() {
-        return measurementService.findAll()
-                .stream()
-                .filter(Measurement::getRaining)
-                .count();
+        return measurementsList.stream().filter(Measurement::getRaining).count();
     }
 
     @PostMapping("/add")
