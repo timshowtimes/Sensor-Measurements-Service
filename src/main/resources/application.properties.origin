@@ -1,0 +1,16 @@
+server.port=
+
+# Data source
+spring.datasource.driver-class-name=
+spring.datasource.url=
+spring.datasource.username=
+spring.datasource.password=
+
+#Configuration Hibernate
+spring.jpa.properties.hibernate.dialect =
+spring.jpa.properties.hibernate.show_sql=
+spring.jpa.hibernate.ddl-auto=
+
+# Visible Hidden methods
+spring.mvc.hiddenmethod.filter.enabled=
+spring.thymeleaf.encoding=
