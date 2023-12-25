@@ -1,7 +1,7 @@
 # Sensor-Measurements-Service [Rest API]
 ![I](https://r2mcursos.com/pluginfile.php/372/course/overviewfiles/API%20REST.png)
 
-Имитация работы метеорологических сенсоров. Сервис имеет возможность:
+## Имитация работы метеорологических сенсоров. Сервис имеет возможность:
 
 - сохранять новые сенсоры
 - добавлять измерения
